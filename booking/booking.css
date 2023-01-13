@@ -1,0 +1,181 @@
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+body {
+  width: 100%;
+  height: 100%;
+  font-family: "DM Sans";
+  font-style: normal;
+  background: var(--gray_white_2);
+}
+.page_content {
+  margin-right: 50px;
+  margin-left: calc(var(--width_of_vertical_navbar) + 30px);
+  margin-top: 110px;
+}
+
+.page_title {
+  font-weight: 700;
+  font-size: 30px;
+  color: var(--primary_dark_1);
+}
+.dislay_options {
+  width: 100%;
+  margin-top: 35px;
+  display: flex;
+  justify-content: space-between;
+}
+.display_type {
+  display: flex;
+  align-items: flex-start;
+  gap: 25px;
+}
+select {
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  margin: 0;
+  width: 100%;
+  cursor: pointer;
+}
+.select_style {
+  min-width: 110px;
+  max-width: 120px;
+  border: 1px solid var(--select-border);
+  border-radius: 20px;
+  padding: 10px 15px;
+  font-weight: 500;
+  font-size: 16px;
+  cursor: pointer;
+  line-height: 1.1;
+  background-color: #ffffff;
+  display: grid;
+  align-items: center;
+  grid-template-areas: "select";
+  color: var(--gray_dark_2);
+}
+.select_style::after {
+  content: "";
+  width: 0.8em;
+  height: 0.7em;
+  background-color: var(--gray_dark_2);
+  clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+  justify-self:end ;
+}
+
+select,
+.select_style:after {
+  grid-area: select;
+}
+.display_style {
+  display: flex;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 16px;
+}
+.display_style_img {
+  padding: 10px;
+  background: #ffffff;
+  border-radius: 30px;
+}
+.display_style_img img {
+  mix-blend-mode: multiply;
+  transition: opacity 1s ease-in-out;
+}
+
+/*switching the lock style icon*/
+.display_style_img :first-child {
+  display: block;
+}
+
+.display_style_img :last-child {
+  display: none;
+}
+
+.active_display_style {
+  background-color: #a162f7;
+}
+
+.active_display_style :first-child {
+  display: none;
+}
+
+.active_display_style :last-child {
+  display: block;
+}
+
+.items_container {
+  width: 100%;
+  height: auto;
+  margin-top: 40px;
+  display: grid;
+  gap: 25px;
+  grid-template-columns: auto auto auto;
+}
+.item {
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 24px;
+  gap: 10px;
+  background-color: #ffffff;
+  border-radius: 16px;
+}
+.item_section {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.item_section .car_name {
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--primary_dark_1);
+}
+
+.item_section .react_button :first-child {
+  display: block;
+}
+.item_section .react_button :last-child {
+  display: none;
+}
+.item_section .active_react :first-child {
+  display: none;
+}
+.item_section .active_react :last-child {
+  display: block;
+}
+.item .car_img {
+  width: 90%;
+  margin: auto;
+}
+
+.item_section .car_information_container {
+  display: flex;
+  align-items: center;
+  padding: 0px;
+  gap: 18px;
+}
+.item_section .car_information {
+  display: flex;
+  align-items: center;
+  padding: 0px;
+  gap: 5px;
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--gray_dark_3);
+}
+
+.item_section .price {
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--gray_dark_3);
+}
+.item_section .price span {
+  font-weight: 500;
+  font-size: 18px;
+  color: var(--primary_dark_1);
+}

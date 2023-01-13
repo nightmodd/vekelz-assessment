@@ -1,0 +1,47 @@
+
+.horoizantl_nav {
+  background-color: var(--gray_white);
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin-left: var(--width_of_vertical_navbar);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 100px 15px 31px;
+  z-index: 10;
+  width: calc(100% - var(--width_of_vertical_navbar));
+}
+.search_area {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.search_area img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin: 28px 44.5px;
+}
+.search_area input {
+  width: 358px;
+  height: 46px;
+  padding-left: 50px;
+  gap: 10px;
+  caret-color: var(--orange);
+}
+.personal_area {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  padding: 0px;
+  gap: 39px;
+}
+input {
+  background: var(--gray_white_1);
+  border-radius: 8px;
+  font-weight: var(--font_500);
+  font-size: var(--font_size_16);
+  line-height: 21px;
+  color: #7c7c8d;
+}

@@ -1,0 +1,21 @@
+:root {
+  --width_of_vertical_navbar: 248px;
+  --gray_dark: #1f2128;
+  --gray_dark_2: #5f6165;
+  --gray_dark_3: #72767c;
+  --primary_dark_1: #242731;
+  --primary_purple: #a162f7;
+  --gray_white: #ffffff;
+  --gray_white_1: #f5f4f6;
+  --gray_white_2: #f5f4f6;
+  --orange: #ff764c;
+  --blue: #2884ff;
+  --font_700: 700;
+  --font_500: 500;
+  --font_size_14: 14px;
+  --font_size_16: 16px;
+  --font_size_20: 20px;
+  --font_size_24: 24px;
+  --boarder_radius_14: 14px;
+  --boarder_radius_24: 24px;
+}

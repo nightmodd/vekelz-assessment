@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Booking</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/tailwindcss@3.2.4/src/css/preflight.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../shared/varibles.css" />
+    <link rel="stylesheet" href="../shared/vertical_navBar.css" />
+    <link rel="stylesheet" href="../shared/horizontal_navBar.css" />
+
+    <link rel="stylesheet" href="booking.css" />
+  </head>
+  <body>
+    <nav class="vertical_nav">
+      <div class="logo_data">
+        <img src="/assets/logo.svg" alt="logo icon" width="27" height="27" />
+        <span class="title">Motiv</span>
+      </div>
+      <div class="lists_container">
+        <ul class="avilable_pages">
+          <li class="nav_item" onclick="addActiveClass(event)">
+            <div class="nav_item_container">
+              <a href="../index.html">
+                <img
+                  src="/assets/dashboard.svg"
+                  alt="dashboard icon"
+                  width="20"
+                  height="20"
+                />
+                <span>Dashboard</span></a
+              >
+            </div>
+          </li>
+          <li class="nav_item" onclick="addActiveClass(event)">
+            <div class="nav_item_container">
+              <a href="#">
+                <img
+                  src="/assets/assets.svg"
+                  alt="assets icon"
+                  width="20"
+                  height="20"
+                />
+                <span>Assets</span></a
+              >
+            </div>
+          </li>
+          <li class="nav_item active_page" onclick="addActiveClass(event)">
+            <div class="nav_item_container">
+              <a href="#">
+                <img
+                  src="/assets/booking.svg"
+                  alt="booking icon"
+                  width="20"
+                  height="20"
+                />
+                <span>Booking</span></a
+              >
+            </div>
+          </li>
+          <li class="nav_item" onclick="addActiveClass(event)">
+            <div class="nav_item_container">
+              <a href="#">
+                <img
+                  src="/assets/sell cars.svg"
+                  alt="sell cars icon"
+                  width="20"
+                  height="20"
+                />
+                <span>Sell Cars</span></a
+              >
+            </div>
+          </li>
+          <li class="nav_item" onclick="addActiveClass(event)">
+            <div class="nav_item_container">
+              <a href="#">
+                <img
+                  src="/assets/buy cars.svg"
+                  alt="buy cars icon"
+                  width="20"
+                  height="20"
+                />
+                <span>Buy Cars</span></a
+              >
+            </div>
+          </li>
+          <li class="nav_item" onclick="addActiveClass(event)">
+            <div class="nav_item_container">
+              <a href="#">
+                <img
+                  src="/assets/services.svg"
+                  alt="services icon"
+                  width="20"
+                  height="20"
+                />
+                <span>Services</span></a
+              >
+            </div>
+          </li>
+          <li class="nav_item" onclick="addActiveClass(event)">
+            <div class="nav_item_container">
+              <a href="#">
+                <img
+                  src="/assets/calender.svg"
+                  alt="calender icon"
+                  width="20"
+                  height="20"
+                />
+                <span>Calender</span></a
+              >
+            </div>
+          </li>
+          <li class="nav_item" onclick="addActiveClass(event)">
+            <div class="nav_item_container">
+              <a href="#">
+                <img
+                  src="/assets/messages.svg"
+                  alt="messages icon"
+                  width="20"
+                  height="20"
+                />
+                <span>Messages</span></a
+              >
+            </div>
+          </li>
+        </ul>
+        <ul class="actions_section">
+          <li>
+            <div class="nav_item_container">
+              <a href="#">
+                <img
+                  src="/assets/settings.svg"
+                  alt="settings icon"
+                  width="20"
+                  height="20"
+                />
+                <span>Settings</span></a
+              >
+            </div>
+          </li>
+          <li>
+            <div class="nav_item_container">
+              <a href="#">
+                <img
+                  src="/assets/logout.svg"
+                  alt="settings icon"
+                  width="20"
+                  height="20"
+                />
+                <span>Logout</span></a
+              >
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="horoizantl_nav">
+      <div class="search_area">
+        <img src="../assets/search.svg" alt="search icon" />
+        <input type="text" name="search" placeholder="Search or type" />
+      </div>
+      <div class="personal_area">
+        <img src="../assets/notification.svg" alt="notification icon" />
+        <img
+          src="../assets/Mask group.svg"
+          alt="personal icon"
+          width="48"
+          height="48"
+        />
+      </div>
+    </div>
+    <div class="page_content">
+      <span class="page_title">Booking</span>
+
+      <div class="dislay_options">
+        <div class="display_type">
+          <div class="select_style">
+            <select name="cars_style">
+              <option value="volvo">New</option>
+              <option value="old">Old</option>
+              <option value="classic">Classic</option>
+              <option value="sports">Sports</option>
+            </select>
+          </div>
+          <div class="select_style">
+            <select name="cars_type">
+              <option value="volvo">Volvo</option>
+              <option value="saab">Saab</option>
+              <option value="fiat">Fiat</option>
+              <option value="audi">Audi</option>
+            </select>
+          </div>
+        </div>
+        <div class="display_style">
+          <button class="display_style_img" onclick="addActiveClass(event)">
+            <img src="./assests/display_style_1.svg" alt="display_style icon" />
+            <img
+              src="./assests/display_style_1(active).svg"
+              alt="display_style icon"
+            />
+          </button>
+          <button
+            class="display_style_img active_display_style"
+            onclick="addActiveClass(event)"
+          >
+            <img src="./assests/display_style_2.svg" alt="display_style icon" />
+            <img
+              src="./assests/display_style_2(active).svg"
+              alt="display_style icon"
+            />
+          </button>
+        </div>
+      </div>
+
+      <div class="items_container">
+        <div class="item">
+          <div class="item_section">
+            <span class="car_name">Porsche 718 Cayman S</span>
+            <button
+              class="react_button active_react"
+              onclick="toggleHeart(event)"
+            >
+              <img src="./assests/heart.svg" alt="heart img" />
+              <img src="./assests/red_heart.svg" alt="heart img" />
+            </button>
+          </div>
+          <img class="car_img" src="./assests/car_img.svg" alt="car image" />
+          <div class="item_section">
+            <div class="car_information_container">
+              <div class="car_information">
+                <img src="./assests/person.svg" alt="person icon" />
+                <span>4</span>
+              </div>
+              <div class="car_information">
+                <img src="./assests/repost.svg" alt="repost icon" />
+                <span>Manual</span>
+              </div>
+            </div>
+            <div class="price"><span>$400</span>/d</div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="item_section">
+            <span class="car_name">Porsche 718 Cayman S</span>
+            <button class="react_button" onclick="toggleHeart(event)">
+              <img src="./assests/heart.svg" alt="heart img" />
+              <img src="./assests/red_heart.svg" alt="heart img" />
+            </button>
+          </div>
+          <img class="car_img" src="./assests/car_img.svg" alt="car image" />
+          <div class="item_section">
+            <div class="car_information_container">
+              <div class="car_information">
+                <img src="./assests/person.svg" alt="person icon" />
+                <span>4</span>
+              </div>
+              <div class="car_information">
+                <img src="./assests/repost.svg" alt="repost icon" />
+                <span>Manual</span>
+              </div>
+            </div>
+            <div class="price"><span>$400</span>/d</div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="item_section">
+            <span class="car_name">Porsche 718 Cayman S</span>
+            <button class="react_button" onclick="toggleHeart(event)">
+              <img src="./assests/heart.svg" alt="heart img" />
+              <img src="./assests/red_heart.svg" alt="heart img" />
+            </button>
+          </div>
+          <img class="car_img" src="./assests/car_img.svg" alt="car image" />
+          <div class="item_section">
+            <div class="car_information_container">
+              <div class="car_information">
+                <img src="./assests/person.svg" alt="person icon" />
+                <span>4</span>
+              </div>
+              <div class="car_information">
+                <img src="./assests/repost.svg" alt="repost icon" />
+                <span>Manual</span>
+              </div>
+            </div>
+            <div class="price"><span>$400</span>/d</div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="item_section">
+            <span class="car_name">Porsche 718 Cayman S</span>
+            <button class="react_button" onclick="toggleHeart(event)">
+              <img src="./assests/heart.svg" alt="heart img" />
+              <img src="./assests/red_heart.svg" alt="heart img" />
+            </button>
+          </div>
+          <img class="car_img" src="./assests/car_img.svg" alt="car image" />
+          <div class="item_section">
+            <div class="car_information_container">
+              <div class="car_information">
+                <img src="./assests/person.svg" alt="person icon" />
+                <span>4</span>
+              </div>
+              <div class="car_information">
+                <img src="./assests/repost.svg" alt="repost icon" />
+                <span>Manual</span>
+              </div>
+            </div>
+            <div class="price"><span>$400</span>/d</div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="item_section">
+            <span class="car_name">Porsche 718 Cayman S</span>
+            <button class="react_button" onclick="toggleHeart(event)">
+              <img src="./assests/heart.svg" alt="heart img" />
+              <img src="./assests/red_heart.svg" alt="heart img" />
+            </button>
+          </div>
+          <img class="car_img" src="./assests/car_img.svg" alt="car image" />
+          <div class="item_section">
+            <div class="car_information_container">
+              <div class="car_information">
+                <img src="./assests/person.svg" alt="person icon" />
+                <span>4</span>
+              </div>
+              <div class="car_information">
+                <img src="./assests/repost.svg" alt="repost icon" />
+                <span>Manual</span>
+              </div>
+            </div>
+            <div class="price"><span>$400</span>/d</div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="item_section">
+            <span class="car_name">Porsche 718 Cayman S</span>
+            <button class="react_button" onclick="toggleHeart(event)">
+              <img src="./assests/heart.svg" alt="heart img" />
+              <img src="./assests/red_heart.svg" alt="heart img" />
+            </button>
+          </div>
+          <img class="car_img" src="./assests/car_img.svg" alt="car image" />
+          <div class="item_section">
+            <div class="car_information_container">
+              <div class="car_information">
+                <img src="./assests/person.svg" alt="person icon" />
+                <span>4</span>
+              </div>
+              <div class="car_information">
+                <img src="./assests/repost.svg" alt="repost icon" />
+                <span>Manual</span>
+              </div>
+            </div>
+            <div class="price"><span>$400</span>/d</div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="item_section">
+            <span class="car_name">Porsche 718 Cayman S</span>
+            <button class="react_button" onclick="toggleHeart(event)">
+              <img src="./assests/heart.svg" alt="heart img" />
+              <img src="./assests/red_heart.svg" alt="heart img" />
+            </button>
+          </div>
+          <img class="car_img" src="./assests/car_img.svg" alt="car image" />
+          <div class="item_section">
+            <div class="car_information_container">
+              <div class="car_information">
+                <img src="./assests/person.svg" alt="person icon" />
+                <span>4</span>
+              </div>
+              <div class="car_information">
+                <img src="./assests/repost.svg" alt="repost icon" />
+                <span>Manual</span>
+              </div>
+            </div>
+            <div class="price"><span>$400</span>/d</div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="item_section">
+            <span class="car_name">Porsche 718 Cayman S</span>
+            <button class="react_button" onclick="toggleHeart(event)">
+              <img src="./assests/heart.svg" alt="heart img" />
+              <img src="./assests/red_heart.svg" alt="heart img" />
+            </button>
+          </div>
+          <img class="car_img" src="./assests/car_img.svg" alt="car image" />
+          <div class="item_section">
+            <div class="car_information_container">
+              <div class="car_information">
+                <img src="./assests/person.svg" alt="person icon" />
+                <span>4</span>
+              </div>
+              <div class="car_information">
+                <img src="./assests/repost.svg" alt="repost icon" />
+                <span>Manual</span>
+              </div>
+            </div>
+            <div class="price"><span>$400</span>/d</div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="item_section">
+            <span class="car_name">Porsche 718 Cayman S</span>
+            <button class="react_button" onclick="toggleHeart(event)">
+              <img src="./assests/heart.svg" alt="heart img" />
+              <img src="./assests/red_heart.svg" alt="heart img" />
+            </button>
+          </div>
+          <img class="car_img" src="./assests/car_img.svg" alt="car image" />
+          <div class="item_section">
+            <div class="car_information_container">
+              <div class="car_information">
+                <img src="./assests/person.svg" alt="person icon" />
+                <span>4</span>
+              </div>
+              <div class="car_information">
+                <img src="./assests/repost.svg" alt="repost icon" />
+                <span>Manual</span>
+              </div>
+            </div>
+            <div class="price"><span>$400</span>/d</div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="item_section">
+            <span class="car_name">Porsche 718 Cayman S</span>
+            <button class="react_button" onclick="toggleHeart(event)">
+              <img src="./assests/heart.svg" alt="heart img" />
+              <img src="./assests/red_heart.svg" alt="heart img" />
+            </button>
+          </div>
+          <img class="car_img" src="./assests/car_img.svg" alt="car image" />
+          <div class="item_section">
+            <div class="car_information_container">
+              <div class="car_information">
+                <img src="./assests/person.svg" alt="person icon" />
+                <span>4</span>
+              </div>
+              <div class="car_information">
+                <img src="./assests/repost.svg" alt="repost icon" />
+                <span>Manual</span>
+              </div>
+            </div>
+            <div class="price"><span>$400</span>/d</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="/utils.js"></script>
+
+  <script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+  <script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
+  <script src="https://cdn.amcharts.com/lib/5/percent.js"></script>
+  <script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+  <script src="booking.js"></script>
+</html>
